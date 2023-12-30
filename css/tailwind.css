@@ -1,3 +1,107 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.wrapper {
+  @apply py-10 px-6;
+}
+.section-title {
+  @apply text-2xl font-bold mb-6;
+}
+.btn {
+  @apply px-6 py-3 mr-4 text-sm font-semibold;
+}
+.btn--orange {
+  @apply bg-yellow-600 text-white border-yellow-600 border;
+}
+.btn--white {
+  @apply bg-white text-black border border-black;
+}
+
+.product-section {
+  .product-section-vertical {
+    &__tabs {
+      @apply w-full my-2;
+    }
+    &__item {
+      @apply pr-2 mx-2 relative;
+      &:after {
+        content: "";
+        width: 0.1%;
+        height: 60%;
+        background-color: #535353;
+        position: absolute;
+        top: 0.2rem;
+        right: -0.1rem;
+      }
+    }
+    &__item-title {
+      @apply tracking-normal text-gray-700 text-sm;
+    }
+    &--last-item {
+      @apply border-none;
+    }
+    &--active-item {
+      @apply border-b-2 border-primary;
+    }
+    &__image-wrapper {
+      @apply w-full mx-auto;
+      img {
+        @apply w-full;
+      }
+    }
+    &__product-name {
+      @apply py-4 text-lg font-bold;
+    }
+    &__product-tag {
+      @apply hidden bg-yellow-600;
+    }
+    &__product-description {
+      @apply mb-3;
+    }
+  }
+
+  .product-section-horizontal {
+    &__item {
+      @apply relative px-1 py-2;
+    }
+
+    &__product-tag {
+      @apply bg-yellow-600 text-white font-semibold text-xs uppercase py-1 px-2;
+    }
+
+    &--active-item {
+      @apply py-6;
+      .up-down-buttons {
+        @apply absolute flex flex-col h-8 -ml-8 pb-6;
+      }
+      .product-section-horizontal__item-title {
+        @apply pb-1 text-lg font-extrabold;
+      }
+      .product-section-horizontal__product-description {
+        @apply mb-6;
+      }
+    }
+
+    &--inactive-item {
+      .product-section-horizontal__item-title {
+        @apply text-gray-400 font-semibold;
+      }
+      .product-section-horizontal__buttons-wrapper {
+        @apply hidden;
+      }
+      .up-down-buttons {
+        @apply hidden;
+      }
+      .product-section-horizontal__product-description {
+        @apply hidden;
+      }
+    }
+  }
+}
+
+@screen lg {
+  .product-section-vertical {
+    @apply hidden;
+  }
+}
