@@ -164,6 +164,35 @@
   }
 }
 
+.share-media {
+  &__columns {
+    @apply flex flex-col w-full;
+  }
+  &__column {
+    @apply flex flex-col w-full h-auto;
+  }
+  &__item {
+    @apply relative m-1;
+
+    &:hover {
+      .share-media__item-overlay {
+        @apply block;
+      }
+      .share-media__item-text {
+        @apply block cursor-pointer;
+      }
+    }
+  }
+
+  &__item-overlay {
+    @apply absolute hidden h-full w-full bg-gray-700 opacity-50 z-0;
+  }
+
+  &__item-text {
+    @apply absolute inset-0 p-4 text-gray-100 text-sm hidden z-10;
+  }
+}
+
 @screen lg {
   .product-section-vertical {
     @apply hidden;
@@ -240,6 +269,35 @@
     }
     &__news-card-text {
       @apply w-4/5 mx-0 px-0;
+    }
+  }
+
+  .share-media {
+    &__columns {
+      @apply flex flex-row mx-auto w-10/12;
+    }
+    &__column {
+      @apply flex flex-col w-1/4 h-auto;
+    }
+    &__item {
+      @apply relative m-1;
+
+      &:hover {
+        .share-media__item-overlay {
+          @apply block;
+        }
+        .share-media__item-text {
+          @apply block cursor-pointer;
+        }
+      }
+    }
+
+    &__item-overlay {
+      @apply absolute hidden h-full w-full bg-gray-700 opacity-50 z-0;
+    }
+
+    &__item-text {
+      @apply absolute inset-0 p-4 text-gray-100 text-sm hidden z-10;
     }
   }
 }
