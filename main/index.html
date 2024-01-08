@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>模写TAILWIND Juliana Bicycles.com</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Mooli&family=Source+Code+Pro:wght@200;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- top bar -->
+    <div
+      class="items-center justify-end hidden md:flex h-12 w-full bg-dark text-white pr-8 lg:pr-24 xl:pr-48"
+    >
+      <div class="mr-10 text-gray-700 cursor-pointer hover:text-secondary">
+        <svg class="fill-current h-3 w-auto" viewBox="0 0 445.7 35.73">
+          <path
+            class="cls-1"
+            d="M186.84 7.7l-16.4 28h-14.27l16.4-28H157l-16.4 28h-17.17l-2.29-22.15-13 22.15H93.93L114.84.01h17.32l2.27 21.86L147.24 0h56.33l-4.51 7.69zm145.91 20.31c-2.47 4.23-1.08 7.65 3.11 7.7h26.33c4.25 0 9.71-3.45 12.2-7.7l11.9-20.31h24.14l-32.71 28h40.71l4.51-7.7h-18.18l30.59-28h-58.84l-16.4 28h-13.09l16.4-28h-14.27zm-239-28H80.43l-40.71 35.7h54zm-14.06 28H62.8l17.29-15.16zm153.07-28h-13.33l-40.72 35.7h54zm-14.07 28H201.8l17.29-15.16zm-205.95-14c-2.47 4.22-1.08 7.66 3.11 7.7h16.94l-3.69 6.3H4.51L0 35.71h31.14c4.25 0 9.71-3.45 12.21-7.7l3.7-6.3c2.5-4.25 1.07-7.7-3.19-7.7H26.99l3.69-6.31h24.57L59.76.01H28.61c-4.25 0-9.72 3.45-12.21 7.69zm248.86 14L273.43 7.7h20.35l4.51-7.69h-26.86c-4.25 0-9.71 3.45-12.2 7.69l-11.9 20.31c-2.47 4.22-1.08 7.65 3.11 7.7h27l4.52-7.72zm42.81-28L283.43 35.7h14.3l6.9-11.77h2.86l4.88 11.77h15l-5.94-11.77c4.25 0 9.72-3.45 12.21-7.7l5-8.53c2.49-4.25 1.07-7.7-3.19-7.7h-31.07zm15.02 16.22h-10.3l5-8.53h10.3zM439.87.57h-1.55v3.28h-.89V.57h-1.55V0h4zm.72-.57h1.32l1 2.32c.14.32.21.54.21.54s.07-.22.2-.55l1-2.31h1.31v3.85h-.89V.73a7 7 0 01-.28.74l-1 2.38h-.71l-1-2.38a7.07 7.07 0 01-.28-.74v3.12h-.83z"
+          ></path>
+        </svg>
+      </div>
+      <div class="mr-10 text-gray-700 cursor-pointer hover:text-primary">
+        <svg viewBox="0 0 807.5 120" class="fill-current h-4 w-auto">
+          <path
+            d="M181.9 6.44v64.12c0 9.63-1.85 14.19-3.42 16.31-3.35 4.61-8 6.84-14.24 6.84s-10.87-2.23-14.19-6.78c-2.27-3.23-3.41-8.73-3.41-16.37V6.44h-23.4v68.25c0 11.54 3.71 21.26 11 28.81a42 42 0 0059.39.69l.08-.08c.2-.2.41-.4.6-.61 7.28-7.55 11-17.27 11-28.81V6.44zm15 68.25c0 9.46-2.81 17-8.6 23a33.75 33.75 0 01-47.71.36c-.12-.11-.23-.22-.34-.34-5.79-6-8.63-13.55-8.63-23V14.84h6.67V70.6c0 9.54 1.6 16.46 5 21.22 5 6.83 12 10.3 21 10.3s16-3.47 21-10.3c3.35-4.58 5-11.53 5-21.22V14.84h6.66zM281.05 91.82V6.44h-23.4v107.88h59v-22.5zM308.22 106H266V14.84h6.67v85.41h35.54zM363 6.44v107.88h23.37V6.44zM378 106h-6.63V14.84H378zM639.34 6.28v62.16L566.79 0v114.38h23.37V51.77L662.71 120V6.28zm15 95L581.78 33v73.82h-6.66v-88l72.55 68.44V13.84h6.66zM478.85 18.48l41.3 87.77h-7.87l-10.5-22.13h-47.33l-11 22.13h-7.62l43-87.77M479 0l-56 114.25h25.5l11-22.13h37.12l10.5 22.13h25.63L479 0z"
+          ></path>
+          <path
+            class="cls-2"
+            d="M478.21 50.78l8.68 18.29h-17.78l9.1-18.29m.17-16.61l-20.63 42.9h40.75z"
+          ></path>
+          <path
+            d="M50.54 6.44v64.12c0 9.63-1.85 14.19-3.39 16.31a15.85 15.85 0 01-5.27 4.7 15.17 15.17 0 01-5.14 1.81 8.59 8.59 0 01-1.6.24 15.07 15.07 0 01-3 .25c-7.63 0-14-4.32-18-10.21L0 100.15a32.72 32.72 0 002.87 3.35c.6.64 1.24 1.24 1.84 1.81A42.1 42.1 0 0063 103.5c7.27-7.5 11-17.27 11-28.81V6.44zm15 68.25c0 9.46-2.8 17-8.6 23a32 32 0 01-24.07 10.06A31.63 31.63 0 0110.16 99l3.93-4.53c5.33 5.15 11.44 7.41 19.13 7.41 9 0 15.7-3.24 20.66-10.07 3.35-4.58 5-11.53 5-21.22V14.84h6.64zM753.6 18.48l41.3 87.77H787l-10.5-22.13h-47.3l-11 22.13h-7.62l43-87.77M753.75 0l-56 114.25h25.5l11-22.13h37.13l10.5 22.13h25.62L753.75 0z"
+          ></path>
+          <path
+            class="cls-2"
+            d="M753 50.78l8.68 18.29h-17.82L753 50.78m.16-16.61l-20.66 42.9h40.75z"
+          ></path>
+        </svg>
+      </div>
+    </div>
+    <!-- header -->
+    <header>
+      <!-- nav menu -->
+      <nav
+        class="flex flex-wrap items-center justify-between bg-white w-full h-20 px-6 z-10 relative md:bg-opacity-95"
+      >
+        <div class="text-dark cursor-pointer">
+          <a href="#">
+            <svg class="fill-current h-6 w-auto" viewBox="0 0 807.5 120">
+              <path
+                d="M181.9 6.44v64.12c0 9.63-1.85 14.19-3.42 16.31-3.35 4.61-8 6.84-14.24 6.84s-10.87-2.23-14.19-6.78c-2.27-3.23-3.41-8.73-3.41-16.37V6.44h-23.4v68.25c0 11.54 3.71 21.26 11 28.81a42 42 0 0059.39.69l.08-.08c.2-.2.41-.4.6-.61 7.28-7.55 11-17.27 11-28.81V6.44zm15 68.25c0 9.46-2.81 17-8.6 23a33.75 33.75 0 01-47.71.36c-.12-.11-.23-.22-.34-.34-5.79-6-8.63-13.55-8.63-23V14.84h6.67V70.6c0 9.54 1.6 16.46 5 21.22 5 6.83 12 10.3 21 10.3s16-3.47 21-10.3c3.35-4.58 5-11.53 5-21.22V14.84h6.66zM281.05 91.82V6.44h-23.4v107.88h59v-22.5zM308.22 106H266V14.84h6.67v85.41h35.54zM363 6.44v107.88h23.37V6.44zM378 106h-6.63V14.84H378zM639.34 6.28v62.16L566.79 0v114.38h23.37V51.77L662.71 120V6.28zm15 95L581.78 33v73.82h-6.66v-88l72.55 68.44V13.84h6.66zM478.85 18.48l41.3 87.77h-7.87l-10.5-22.13h-47.33l-11 22.13h-7.62l43-87.77M479 0l-56 114.25h25.5l11-22.13h37.12l10.5 22.13h25.63L479 0z"
+              ></path>
+              <path
+                class="cls-2"
+                d="M478.21 50.78l8.68 18.29h-17.78l9.1-18.29m.17-16.61l-20.63 42.9h40.75z"
+              ></path>
+              <path
+                d="M50.54 6.44v64.12c0 9.63-1.85 14.19-3.39 16.31a15.85 15.85 0 01-5.27 4.7 15.17 15.17 0 01-5.14 1.81 8.59 8.59 0 01-1.6.24 15.07 15.07 0 01-3 .25c-7.63 0-14-4.32-18-10.21L0 100.15a32.72 32.72 0 002.87 3.35c.6.64 1.24 1.24 1.84 1.81A42.1 42.1 0 0063 103.5c7.27-7.5 11-17.27 11-28.81V6.44zm15 68.25c0 9.46-2.8 17-8.6 23a32 32 0 01-24.07 10.06A31.63 31.63 0 0110.16 99l3.93-4.53c5.33 5.15 11.44 7.41 19.13 7.41 9 0 15.7-3.24 20.66-10.07 3.35-4.58 5-11.53 5-21.22V14.84h6.64zM753.6 18.48l41.3 87.77H787l-10.5-22.13h-47.3l-11 22.13h-7.62l43-87.77M753.75 0l-56 114.25h25.5l11-22.13h37.13l10.5 22.13h25.62L753.75 0z"
+              ></path>
+              <path
+                class="cls-2"
+                d="M753 50.78l8.68 18.29h-17.82L753 50.78m.16-16.61l-20.66 42.9h40.75z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="block md:hidden">
+          <button class="pr-6 hover:text-gray-700" id="nav-toggle">
+            <svg
+              class="fill current h-6 w-6"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="nav-content"
+          class="hidden font-bold md:flex md:items-center md:w-auto md:text-xs"
+        >
+          <ul class="md:flex md:flex-1 font-main">
+            <li>
+              <a
+                href="#"
+                class="inline-block py-2 px-4 cursor-pointer text-dark hover:text-primary transition-colors duration-700 ease-out lg:px-8"
+                >Bikes</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="inline-block py-2 px-4 cursor-pointer text-dark hover:text-primary transition-colors duration-700 ease-out lg:px-8"
+                >Demo</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="inline-block py-2 px-4 cursor-pointer text-dark hover:text-primary transition-colors duration-700 ease-out lg:px-8"
+                >Riders</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="inline-block py-2 px-4 cursor-pointer text-dark hover:text-primary transition-colors duration-700 ease-out lg:px-8"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="inline-block py-2 px-4 cursor-pointer text-dark hover:text-primary transition-colors duration-700 ease-out lg:px-8"
+                >What We Do</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="hidden md:flex items-center justify-between">
+          <div
+            class="mx-4 text-dark hover:text-primary cursor-pointer transition-colors duration-700 ease-out"
+          >
+            <svg
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 54.22 54.22"
+              style="enable-background: new 0 0 54.22 54.22"
+              xml:space="preserve"
+              class="h-5 w-5 fill-current"
+            >
+              <style type="text/css">
+                .st0 {
+                  fill: #ffffff;
+                }
+                .st1 {
+                  fill: none;
+                  stroke: #000000;
+                  stroke-width: 3;
+                  stroke-miterlimit: 10;
+                }
+                .st2 {
+                  fill: none;
+                  stroke: #ffffff;
+                  stroke-width: 3;
+                  stroke-miterlimit: 10;
+                }
+              </style>
+              <circle class="st0" cx="27.11" cy="27.11" r="27.11" />
+              <g>
+                <g>
+                  <path
+                    class="st1"
+                    d="M21.45,21.52c0-4.99,2.53-9.04,5.66-9.04c3.12,0,5.66,4.05,5.66,9.04"
+                  />
+                </g>
+                <polygon
+                  class="st1"
+                  points="39.21,41.74 15.01,41.74 16.01,21.52 38.21,21.52 	"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="mx-4 text-dark hover:text-primary cursor-pointer transition-colors duration-700 ease-out"
+          >
+            <svg
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 54.22 54.22"
+              style="enable-background: new 0 0 54.22 54.22"
+              xml:space="preserve"
+              class="h-5 w-5 fill-current"
+            >
+              <style type="text/css">
+                .st0 {
+                  fill: #ffffff;
+                }
+                .st1 {
+                  fill: none;
+                  stroke: #000000;
+                  stroke-width: 2.5;
+                  stroke-miterlimit: 10;
+                }
+                .st2 {
+                  fill: none;
+                  stroke: #ffffff;
+                  stroke-width: 2.5;
+                  stroke-miterlimit: 10;
+                }
+              </style>
+              <circle class="st0" cx="27.11" cy="27.11" r="27.11" />
+              <g>
+                <circle class="st1" cx="27.11" cy="18.62" r="5.88" />
+                <path
+                  class="st1"
+                  d="M38.87,41.48H15.35l1.04-6.1c0.51-3,3.72-5.23,7.51-5.23h6.33c3.84,0,7.09,2.26,7.6,5.29L38.87,41.48z"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </nav>
+      <!-- hero -->
+      <div class="site-hero relative md:-mt-20 z-0">
+        <div class="site-hero__img">
+          <picture>
+            <source
+              media="(min-width: 400px) and (orientation: landscape)"
+              srcset="img/jlb_mobile_home_hero.jpg"
+            />
+            <source
+              media="(min-width: 400px) and (orientation: portrait)"
+              srcset="img/jlb_web_home_hero.jpg"
+            />
+            <img
+              src="img/jlb_mobile_home_hero.jpg"
+              alt="juliana bycicles"
+              class="w-full"
+            />
+          </picture>
+        </div>
+        <div
+          class="site-hero__text-container absolute top-1/2 pl-8 -translate-y-1/2 flex flex-col justify-start lg:items-end lg:w-full lg:pr-14"
+        >
+          <h1
+            class="site-hero__title font-bold text-yellow-100 text-left text-4xl w-2/3 mb-6 sm:w-3/5 md:mt-20 lg:text-right lg:w-2/5"
+          >
+            The Original Women's Mountain Bike
+          </h1>
+          <div class="site-hero__button">
+            <a
+              href="#"
+              class="btn-primary bg-primary px-6 py-3 text-white text-sm font-bold"
+              >See the Bikes</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- product section -->
+    <section class="product-section">
+      <!-- product section vertical -->
+      <div class="wrapper">
+        <div class="product-section-vertical">
+          <div class="section-title">
+            <span>Explore our lineup</span>
+          </div>
+          <div class="product-section-vertical__tabs">
+            <ul class="flex overflow-hidden">
+              <li
+                class="product-section-vertical__item product-section-vertical--first-item product-section-vertical--active-item"
+              >
+                <div class="product-section-vertical__item-title">Furtado</div>
+              </li>
+              <li class="product-section-vertical__item">
+                <div class="product-section-vertical__item-title">Joplin</div>
+              </li>
+              <li class="product-section-vertical__item">
+                <div class="product-section-vertical__item-title">Maverick</div>
+              </li>
+              <li class="product-section-vertical__item">
+                <div class="product-section-vertical__item-title">Roubion</div>
+              </li>
+              <li
+                class="product-section-vertical__item product-section-vertical--last-item"
+              >
+                <div class="product-section-vertical__item-title">Quincy</div>
+              </li>
+            </ul>
+          </div>
+          <div class="product-section-vertical__imageWrapper">
+            <img
+              src="https://www.julianabicycles.com/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fsantacruzbikesstatic%2F71485515-763d-4d9e-93aa-c92a2deb79e9__VA77Xjw.jpeg%3Fauto%3Dcompress%252Cformat%26fit%3Dcrop%26ar%3D9%253A5%26crop%3Dfaces%252Cedges&w=2600&q=75"
+              alt=""
+            />
+          </div>
+          <div class="product-section-vertical__product-name">
+            Furtado
+            <span class="product-section-vertical__product-tag">New</span>
+          </div>
+          <div class="product-section-vertical__product-description pb-4">
+            Meet the one bike to rule them all. Meet the new Furtado.
+          </div>
+          <div class="product-section-vertical__buttons-wrapper flex">
+            <div class="product-section-vertical__primary-btn">
+              <a href="#" class="btn btn--orange">More Info</a>
+            </div>
+            <div class="product-section-vertical__secondary-btn">
+              <a href="#" class="btn btn--white">All bikes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- product section horizontal -->
+      <div class="product-section-horizontal hidden lg:block">
+        <div class="wrapper">
+          <div class="section-title">
+            <span>Explore our lineup</span>
+          </div>
+
+          <div class="product-section-horizontal__dataWrapper flex w-full">
+            <div class="product-section-horizontal__imageWrapper w-8/12 mt-6">
+              <img
+                src="https://www.julianabicycles.com/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fsantacruzbikesstatic%2F71485515-763d-4d9e-93aa-c92a2deb79e9__VA77Xjw.jpeg%3Fauto%3Dcompress%252Cformat%26fit%3Dcrop%26ar%3D9%253A5%26crop%3Dfaces%252Cedges&w=2600&q=75"
+                alt=""
+              />
+            </div>
+            <div class="product-section-horizontal__textWrapper w-4/12 px-6">
+              <div class="product-section-horizontal__tabs w-full mx-0">
+                <ul class="flex flex-col">
+                  <li
+                    class="product-section-horizontal__item product-section-horizontal--inactive-item"
+                  >
+                    <div class="up-down-buttons">
+                      <a href="#" class="move-up">
+                        <i class="fas fa-chevron-up"></i>
+                      </a>
+                      <a href="#" class="move-down">
+                        <i class="fas fa-chevron-down"></i>
+                      </a>
+                    </div>
+                    <div class="product-section-horizontal__item-title">
+                      Furtado
+                      <span class="product-section-horizontal__product-tag"
+                        >New</span
+                      >
+                    </div>
+                    <div
+                      class="product-section-horizontal__product-description"
+                    >
+                      Meet the one bike to rule them all. Meet the new Furtado.
+                    </div>
+                    <div
+                      class="product-section-horizontal__buttons-wrapper flex"
+                    >
+                      <div class="product-section-horizontal__primary-btn">
+                        <a href="#" class="btn btn--orange">More Info</a>
+                      </div>
+                      <div class="product-section-horizontal__secondary-btn">
+                        <a href="#" class="btn btn--white">All Bikes</a>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li
+                    class="product-section-horizontal__item product-section-horizontal--inactive-item"
+                  >
+                    <div class="up-down-buttons">
+                      <a href="#" class="move-up">
+                        <i class="fas fa-chevron-up"></i>
+                      </a>
+                      <a href="#" class="move-down">
+                        <i class="fas fa-chevron-down"></i>
+                      </a>
+                    </div>
+                    <div class="product-section-horizontal__item-title">
+                      Joplin
+                    </div>
+
+                    <div
+                      class="product-section-horizontal__product-description pb-4"
+                    >
+                      A little bit (cross) country. A little bit rock and roll.
+                    </div>
+                    <div
+                      class="product-section-horizontal__buttons-wrapper flex"
+                    >
+                      <div class="product-section-horizontal__primary-btn">
+                        <a href="#" class="btn btn--orange">More Info</a>
+                      </div>
+                      <div class="product-section-horizontal__secondary-btn">
+                        <a href="#" class="btn btn--white">All Bikes</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="product-section-horizontal__item product-section-horizontal--active-item"
+                  >
+                    <div class="up-down-buttons">
+                      <a href="#" class="move-up">
+                        <i class="fas fa-chevron-up"></i>
+                      </a>
+                      <a href="#" class="move-down">
+                        <i class="fas fa-chevron-down"></i>
+                      </a>
+                    </div>
+                    <div class="product-section-horizontal__item-title">
+                      Maverick
+                    </div>
+
+                    <div
+                      class="product-section-horizontal__product-description pb-4"
+                    >
+                      A little bit (cross) country. A little bit rock and roll.
+                    </div>
+                    <div
+                      class="product-section-horizontal__buttons-wrapper flex"
+                    >
+                      <div class="product-section-horizontal__primary-btn">
+                        <a href="#" class="btn btn--orange">More Info</a>
+                      </div>
+                      <div class="product-section-horizontal__secondary-btn">
+                        <a href="#" class="btn btn--white">All Bikes</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="product-section-horizontal__item product-section-horizontal--inactive-item"
+                  >
+                    <div class="up-down-buttons">
+                      <a href="#" class="move-up">
+                        <i class="fas fa-chevron-up"></i>
+                      </a>
+                      <a href="#" class="move-down">
+                        <i class="fas fa-chevron-down"></i>
+                      </a>
+                    </div>
+                    <div class="product-section-horizontal__item-title">
+                      Roubion
+                    </div>
+
+                    <div
+                      class="product-section-horizontal__product-description pb-4"
+                    >
+                      A little bit (cross) country. A little bit rock and roll.
+                    </div>
+                    <div
+                      class="product-section-horizontal__buttons-wrapper flex"
+                    >
+                      <div class="product-section-horizontal__primary-btn">
+                        <a href="#" class="btn btn--orange">More Info</a>
+                      </div>
+                      <div class="product-section-horizontal__secondary-btn">
+                        <a href="#" class="btn btn--white">All Bikes</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="product-section-horizontal__item product-section-horizontal--inactive-item"
+                  >
+                    <div class="up-down-buttons">
+                      <a href="#" class="move-up">
+                        <i class="fas fa-chevron-up"></i>
+                      </a>
+                      <a href="#" class="move-down">
+                        <i class="fas fa-chevron-down"></i>
+                      </a>
+                    </div>
+                    <div class="product-section-horizontal__item-title">
+                      Quincy
+                    </div>
+
+                    <div
+                      class="product-section-horizontal__product-description pb-4"
+                    >
+                      A little bit (cross) country. A little bit rock and roll.
+                    </div>
+                    <div
+                      class="product-section-horizontal__buttons-wrapper flex"
+                    >
+                      <div class="product-section-horizontal__primary-btn">
+                        <a href="#" class="btn btn--orange">More Info</a>
+                      </div>
+                      <div class="product-section-horizontal__secondary-btn">
+                        <a href="#" class="btn btn--white">All Bikes</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News section -->
+    <section class="news-section">
+      <div class="wrapper">
+        <div class="section-title">
+          <span>News & Updates</span>
+        </div>
+        <div class="news-section__cards">
+          <div class="news-section__featured-card">
+            <div class="news-section__featured-card-imageWrapper">
+              <img
+                src="https://www.julianabicycles.com/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fsantacruzbikesstatic%2F63d74228-b435-4037-968c-fa3bed4974d2_XlcqyVxU.jpeg%3Fauto%3Dcompress%252Cformat%26fit%3Dcrop%26ar%3D9%253A5%26crop%3Dfaces%252Cedges&w=2600&q=75"
+                alt=""
+              />
+              <div class="news-section__featured-card-title">
+                Lockdown (and Life) Lessons
+              </div>
+              <a href="#" class="read-more">Read more</a>
+            </div>
+          </div>
+
+          <div class="news-section__news-cards">
+            <div class="news-section__news-card">
+              <div class="news-section__news-card-imageWrapper">
+                <img
+                  src="https://www.julianabicycles.com/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fsantacruzbikesstatic%2F63d74228-b435-4037-968c-fa3bed4974d2_XlcqyVxU.jpeg%3Fauto%3Dcompress%252Cformat%26fit%3Dcrop%26ar%3D9%253A5%26crop%3Dfaces%252Cedges&w=2600&q=75"
+                  alt=""
+                />
+              </div>
+              <div class="news-section__news-card-text">
+                <div class="news-section__news-card-category card-category">
+                  Stories / Ambassadors
+                </div>
+                <div class="news-section__news-card-title card-title">
+                  Imposter Syndrome and Battling the 'No'
+                </div>
+                <a href="#" class="read-more">Read more</a>
+              </div>
+            </div>
+            <div class="news-section__news-card">
+              <div class="news-section__news-card-imageWrapper">
+                <img
+                  src="https://www.julianabicycles.com/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fsantacruzbikesstatic%2F63d74228-b435-4037-968c-fa3bed4974d2_XlcqyVxU.jpeg%3Fauto%3Dcompress%252Cformat%26fit%3Dcrop%26ar%3D9%253A5%26crop%3Dfaces%252Cedges&w=2600&q=75"
+                  alt=""
+                />
+              </div>
+              <div class="news-section__news-card-text">
+                <div class="news-section__news-card-category card-category">
+                  Stories / Ambassadors
+                </div>
+                <div class="news-section__news-card-title card-title">
+                  Imposter Syndrome and Battling the 'No'
+                </div>
+                <a href="#" class="read-more">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="news-section__load-more-btn mt-10 text-center">
+          <a href="#" class="btn btn--white w-3/5 md:hidden">Load More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About us section -->
+    <section class="media-panels">
+      <div class="media-panel media-panel--text-first">
+        <div class="media-panel__image-wrapper">
+          <img class="media-panel__image" src="img/001.jpg" alt="" />
+        </div>
+        <div class="media-panel__text-wrapper">
+          <div class="media-panel__inner-text">
+            <h1 class="media-panel__title">All the Latest</h1>
+            <p class="media-panel__desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              recusandae dolore alias doloribus?
+            </p>
+            <a href="#" class="btn btn--orange">See What's New</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="media-panel media-panel--full-image media-panel--text-first">
+        <div class="media-panel__image-wrapper">
+          <img class="media-panel__image" src="img/001.jpg" alt="" />
+        </div>
+        <div class="media-panel__text-wrapper">
+          <div class="media-panel__inner-text">
+            <h1 class="media-panel__title">What We Do</h1>
+            <p class="media-panel__desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              recusandae dolore alias doloribus?
+            </p>
+            <a href="#" class="btn btn--orange">See What's New</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="media-panel media-panel--text-first">
+        <div class="media-panel__image-wrapper">
+          <img class="media-panel__image" src="img/001.jpg" alt="" />
+        </div>
+        <div class="media-panel__text-wrapper">
+          <div class="media-panel__inner-text">
+            <h1 class="media-panel__title">Our Lifetime Warranty</h1>
+            <p class="media-panel__desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              recusandae dolore alias doloribus?
+            </p>
+            <a href="#" class="btn btn--orange">See What's New</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="media-panel media-panel--text-last">
+        <div class="media-panel__image-wrapper">
+          <img class="media-panel__image" src="img/001.jpg" alt="" />
+        </div>
+        <div class="media-panel__text-wrapper">
+          <div class="media-panel__inner-text">
+            <h1 class="media-panel__title">Our Lifetime Warranty</h1>
+            <p class="media-panel__desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              recusandae dolore alias doloribus?
+            </p>
+            <a href="#" class="btn btn--orange">See What's New</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Share media section -->
+    <section class="share-media">
+      <div class="wrapper">
+        <div class="share-media__columns">
+          <div class="share-media__column">
+            <div class="share-media__item">
+              <div class="share-media__item-overlay"></div>
+              <img
+                class="share-media__item-image"
+                src="https://scontent.cdninstagram.com/v/t39.30808-6/409751750_18403211554025314_2376430941456934731_n.jpg?stp=dst-jpg_e35_s1080x1080_sh0.08&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=gsT0GF5ewe8AX9L4Beg&edm=APs17CUAAAAA&ccb=7-5&oh=00_AfCz7aGrxY-l0TywKR6puhMQCv5fsa4-YyXQnxUVFcOEhg&oe=6595890B&_nc_sid=10d13b"
+                alt=""
+              />
+              <p class="share-media__item-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                error ducimus excepturi reprehenderit sequi accusantium eveniet
+                ipsum similique quibusdam impedit?
+              </p>
+            </div>
+            <div class="share-media__item">
+              <div class="share-media__item-overlay"></div>
+              <img
+                class="share-media__item-image"
+                src="https://scontent.cdninstagram.com/v/t39.30808-6/412228313_18404857711025314_6203852605480891333_n.jpg?stp=dst-jpg_e35_p1080x1080_sh0.08&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=H6nnfRgG05UAX8mrVGZ&edm=APs17CUAAAAA&ccb=7-5&oh=00_AfAZCFPJxwNvtrXBVEA8Vp_70zqZIUytyDlds-vntgpjpQ&oe=6595CA1D&_nc_sid=10d13b"
+                alt=""
+              />
+              <p class="share-media__item-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                error ducimus excepturi reprehenderit sequi accusantium eveniet
+                ipsum similique quibusdam impedit?
+              </p>
+            </div>
+            <div class="share-media__item">
+              <div class="share-media__item-overlay"></div>
+              <img
+                class="share-media__item-image"
+                src="https://www.julianabicycles.com/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fsantacruzbikesstatic%2F71485515-763d-4d9e-93aa-c92a2deb79e9__VA77Xjw.jpeg%3Fauto%3Dcompress%252Cformat%26fit%3Dcrop%26ar%3D9%253A5%26crop%3Dfaces%252Cedges&w=2600&q=75"
+                alt=""
+              />
+              <p class="share-media__item-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                error ducimus excepturi reprehenderit sequi accusantium eveniet
+                ipsum similique quibusdam impedit?
+              </p>
+            </div>
+          </div>
+          <div class="share-media__column">
+            <div class="share-media__item">
+              <div class="share-media__item-overlay"></div>
+              <img
+                class="share-media__item-image"
+                src="https://scontent.cdninstagram.com/v/t39.30808-6/406252209_18400910377025314_6170812830124444438_n.jpg?stp=dst-jpg_e35_s1080x1080_sh0.08&efg=e30&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=UK-UT2uCSjQAX-ET-We&edm=APs17CUAAAAA&ccb=7-5&oh=00_AfBMd9NvkdOwhFWyffBG53TELtghr2VviguJsCY6DL5Dzw&oe=65956AAC&_nc_sid=10d13b"
+                alt=""
+              />
+              <p class="share-media__item-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                error ducimus excepturi reprehenderit sequi accusantium eveniet
+                ipsum similique quibusdam impedit?
+              </p>
+            </div>
+            <div class="share-media__item">
+              <div class="share-media__item-overlay"></div>
+              <img
+                class="share-media__item-image"
+                src="https://www.julianabicycles.com/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fsantacruzbikesstatic%2F71485515-763d-4d9e-93aa-c92a2deb79e9__VA77Xjw.jpeg%3Fauto%3Dcompress%252Cformat%26fit%3Dcrop%26ar%3D9%253A5%26crop%3Dfaces%252Cedges&w=2600&q=75"
+                alt=""
+              />
+              <p class="share-media__item-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                error ducimus excepturi reprehenderit sequi accusantium eveniet
+                ipsum similique quibusdam impedit?
+              </p>
+            </div>
+            <div class="share-media__item">
+              <div class="share-media__item-overlay"></div>
+              <img
+                class="share-media__item-image"
+                src="https://scontent.cdninstagram.com/v/t39.30808-6/409751750_18403211554025314_2376430941456934731_n.jpg?stp=dst-jpg_e35_s1080x1080_sh0.08&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=gsT0GF5ewe8AX9L4Beg&edm=APs17CUAAAAA&ccb=7-5&oh=00_AfCz7aGrxY-l0TywKR6puhMQCv5fsa4-YyXQnxUVFcOEhg&oe=6595890B&_nc_sid=10d13b"
+                alt=""
+              />
+              <p class="share-media__item-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                error ducimus excepturi reprehenderit sequi accusantium eveniet
+                ipsum similique quibusdam impedit?
+              </p>
+            </div>
+          </div>
+          <div class="share-media__column">
+            <div class="share-media__item">
+              <div class="share-media__item-overlay"></div>
+              <img
+                class="share-media__item-image"
+                src="https://scontent.cdninstagram.com/v/t39.30808-6/412228313_18404857711025314_6203852605480891333_n.jpg?stp=dst-jpg_e35_p1080x1080_sh0.08&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=H6nnfRgG05UAX8mrVGZ&edm=APs17CUAAAAA&ccb=7-5&oh=00_AfAZCFPJxwNvtrXBVEA8Vp_70zqZIUytyDlds-vntgpjpQ&oe=6595CA1D&_nc_sid=10d13b"
+                alt=""
+              />
+              <p class="share-media__item-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                error ducimus excepturi reprehenderit sequi accusantium eveniet
+                ipsum similique quibusdam impedit?
+              </p>
+            </div>
+            <div class="share-media__item">
+              <div class="share-media__item-overlay"></div>
+              <img
+                class="share-media__item-image"
+                src="https://scontent.cdninstagram.com/v/t39.30808-6/409751750_18403211554025314_2376430941456934731_n.jpg?stp=dst-jpg_e35_s1080x1080_sh0.08&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=gsT0GF5ewe8AX9L4Beg&edm=APs17CUAAAAA&ccb=7-5&oh=00_AfCz7aGrxY-l0TywKR6puhMQCv5fsa4-YyXQnxUVFcOEhg&oe=6595890B&_nc_sid=10d13b"
+                alt=""
+              />
+              <p class="share-media__item-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                error ducimus excepturi reprehenderit sequi accusantium eveniet
+                ipsum similique quibusdam impedit?
+              </p>
+            </div>
+            <div class="share-media__item">
+              <div class="share-media__item-overlay"></div>
+              <img
+                class="share-media__item-image"
+                src="https://scontent.cdninstagram.com/v/t39.30808-6/409751750_18403211554025314_2376430941456934731_n.jpg?stp=dst-jpg_e35_s1080x1080_sh0.08&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=gsT0GF5ewe8AX9L4Beg&edm=APs17CUAAAAA&ccb=7-5&oh=00_AfCz7aGrxY-l0TywKR6puhMQCv5fsa4-YyXQnxUVFcOEhg&oe=6595890B&_nc_sid=10d13b"
+                alt=""
+              />
+              <p class="share-media__item-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                error ducimus excepturi reprehenderit sequi accusantium eveniet
+                ipsum similique quibusdam impedit?
+              </p>
+            </div>
+          </div>
+          <div class="share-media__column">
+            <div class="share-media__item">
+              <div class="share-media__item-overlay"></div>
+              <img
+                class="share-media__item-image"
+                src="https://www.julianabicycles.com/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fsantacruzbikesstatic%2F71485515-763d-4d9e-93aa-c92a2deb79e9__VA77Xjw.jpeg%3Fauto%3Dcompress%252Cformat%26fit%3Dcrop%26ar%3D9%253A5%26crop%3Dfaces%252Cedges&w=2600&q=75"
+                alt=""
+              />
+              <p class="share-media__item-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                error ducimus excepturi reprehenderit sequi accusantium eveniet
+                ipsum similique quibusdam impedit?
+              </p>
+            </div>
+            <div class="share-media__item">
+              <div class="share-media__item-overlay"></div>
+              <img
+                class="share-media__item-image"
+                src="https://scontent.cdninstagram.com/v/t39.30808-6/409751750_18403211554025314_2376430941456934731_n.jpg?stp=dst-jpg_e35_s1080x1080_sh0.08&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=gsT0GF5ewe8AX9L4Beg&edm=APs17CUAAAAA&ccb=7-5&oh=00_AfCz7aGrxY-l0TywKR6puhMQCv5fsa4-YyXQnxUVFcOEhg&oe=6595890B&_nc_sid=10d13b"
+                alt=""
+              />
+              <p class="share-media__item-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                error ducimus excepturi reprehenderit sequi accusantium eveniet
+                ipsum similique quibusdam impedit?
+              </p>
+            </div>
+            <div class="share-media__item">
+              <div class="share-media__item-overlay"></div>
+              <img
+                class="share-media__item-image"
+                src="https://scontent.cdninstagram.com/v/t39.30808-6/412228313_18404857711025314_6203852605480891333_n.jpg?stp=dst-jpg_e35_p1080x1080_sh0.08&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=H6nnfRgG05UAX8mrVGZ&edm=APs17CUAAAAA&ccb=7-5&oh=00_AfAZCFPJxwNvtrXBVEA8Vp_70zqZIUytyDlds-vntgpjpQ&oe=6595CA1D&_nc_sid=10d13b"
+                alt=""
+              />
+              <p class="share-media__item-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                error ducimus excepturi reprehenderit sequi accusantium eveniet
+                ipsum similique quibusdam impedit?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <div class="footer-menus">
+          <div class="footer-menu__wrapper">
+            <span class="footer-menu__title">Company</span>
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >About us</a
+                >
+              </li>
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >What We Do</a
+                >
+              </li>
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >Careers</a
+                >
+              </li>
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >Cookie Policy</a
+                >
+              </li>
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-menu__wrapper">
+            <span class="footer-menu__title">Technology</span>
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >Lifetime Guarantee</a
+                >
+              </li>
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >Carbon Expertise</a
+                >
+              </li>
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >VPP Technology</a
+                >
+              </li>
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >Our Components</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-menu__wrapper">
+            <span class="footer-menu__title">Support</span>
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >Bike Registration</a
+                >
+              </li>
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >Warranty &amp; Replacements</a
+                >
+              </li>
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >Shop Parts &amp; Tools</a
+                >
+              </li>
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >Tech Support</a
+                >
+              </li>
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >Webstore Returns</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-menu__wrapper">
+            <span class="footer-menu__title">Experience</span>
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >Find a Retailer</a
+                >
+              </li>
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >Factory Demo</a
+                >
+              </li>
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >Ride Outs</a
+                >
+              </li>
+              <li class="footer-menu__item">
+                <a
+                  href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+                  >Shop Juliana</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom bar -->
+      <div class="bottom-bar">
+        <div class="bottom-bar__left">
+          <svg
+            class="fill-current h-5 w-auto"
+            id="juliana-logo-simple"
+            viewBox="0 0 807.5 120"
+          >
+            <title>Juliana Bicycles</title>
+            <path
+              d="M182.9,6.44V70.56c0,9.63-1.85,14.19-3.42,16.31-3.35,4.61-8,6.84-14.24,6.84s-10.87-2.23-14.19-6.78c-2.27-3.23-3.41-8.73-3.41-16.37V6.44h-23.4V74.69c0,11.54,3.71,21.26,11,28.81a42,42,0,0,0,59.39.69l.08-.08c.2-.2.41-.4.6-.61,7.28-7.55,11-17.27,11-28.81V6.44Zm15,68.25c0,9.46-2.81,17-8.6,23a33.75,33.75,0,0,1-47.71.36l0,0c-.12-.11-.23-.22-.34-.34-5.79-6-8.63-13.55-8.63-23V14.84h6.67V70.6c0,9.54,1.6,16.46,5,21.22,5,6.83,12,10.3,21,10.3s16-3.47,21-10.3c3.35-4.58,5-11.53,5-21.22V14.84h6.66Z"
+              transform="translate(-1)"
+            ></path>
+            <path
+              d="M282.05,91.82V6.44h-23.4V114.32h59V91.82ZM309.22,106H267V14.84h6.67v85.41h35.54Z"
+              transform="translate(-1)"
+            ></path>
+            <path
+              d="M364,6.44V114.32h23.37V6.44ZM379,106h-6.63V14.84H379Z"
+              transform="translate(-1)"
+            ></path>
+            <path
+              d="M640.34,6.28V68.44L567.79,0V114.38h23.37V51.77L663.71,120V6.28Zm15,95L582.78,33v73.82h-6.66v-88l72.55,68.44V13.84h6.66Z"
+              transform="translate(-1)"
+            ></path>
+            <path
+              d="M479.85,18.48l41.3,87.77h-7.87l-10.5-22.13H455.45l-11,22.13h-7.62l43-87.77M480,0,424,114.25h25.5l11-22.13h37.12l10.5,22.13h25.63L480,0Z"
+              transform="translate(-1)"
+            ></path>
+            <path
+              class="cls-2"
+              d="M479.21,50.78l8.68,18.29H470.11l9.1-18.29m.17-16.61-20.63,42.9H499.5Z"
+              transform="translate(-1)"
+            ></path>
+            <path
+              d="M51.54,6.44V70.56c0,9.63-1.85,14.19-3.39,16.31a15.85,15.85,0,0,1-5.27,4.7,15.17,15.17,0,0,1-5.14,1.81,8.59,8.59,0,0,1-1.6.24,15.07,15.07,0,0,1-3,.25c-7.63,0-14-4.32-18-10.21L1,100.15a32.72,32.72,0,0,0,2.87,3.35c.6.64,1.24,1.24,1.84,1.81A42.1,42.1,0,0,0,64,103.5C71.27,96,75,86.23,75,74.69V6.44Zm15,68.25c0,9.46-2.8,17-8.6,23a32,32,0,0,1-24.07,10.06A31.63,31.63,0,0,1,11.16,99l3.93-4.53c5.33,5.15,11.44,7.41,19.13,7.41,9,0,15.7-3.24,20.66-10.07,3.35-4.58,5-11.53,5-21.22V14.84h6.64Z"
+              transform="translate(-1)"
+            ></path>
+            <path
+              d="M754.6,18.48l41.3,87.77H788l-10.5-22.13H730.2l-11,22.13h-7.62l43-87.77M754.75,0l-56,114.25h25.5l11-22.13h37.13l10.5,22.13H808.5L754.75,0Z"
+              transform="translate(-1)"
+            ></path>
+            <path
+              class="cls-2"
+              d="M754,50.78l8.68,18.29H744.86L754,50.78m.16-16.61L733.5,77.07h40.75Z"
+              transform="translate(-1)"
+            ></path>
+          </svg>
+        </div>
+        <div class="bottom-bar__right">
+          <div class="bottom-bar__icons-wrapper">
+            <a
+              class="bottom-bar__icon"
+              href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              class="bottom-bar__icon"
+              href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              class="bottom-bar__icon"
+              href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              class="bottom-bar__icon"
+              href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+            >
+              <i class="fab fa-vimeo"></i>
+            </a>
+            <a
+              class="bottom-bar__icon"
+              href="https://1234.mn/upload/course/files/20200831_52055_footer_menus.html#"
+            >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+          <div class="bottom-bar__language-selector">
+            <div class="bottom-bar__language-selector-flag flex">
+              <div class="bottom-bar__language-selector-item mr-4">
+                <img src="img/icons/us-flag.png" class="h-4 w-auto" alt="" />
+              </div>
+              <div
+                class="bottom-bar__language-selector-item text-black text-xs"
+              >
+                United States
+              </div>
+            </div>
+            <div class="bottom-bar__language-selector-item">
+              <i class="fas fa-sort-down text-black"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
